@@ -1,0 +1,247 @@
+The license of voice files depends on the origins of these voices.
+We give in turn the origin and license terms of each voice file.
+
+The script HTS_multi2single.py is licensed GPLv2+. For interoperability
+we studied the Festival and hts_engine sources to determine the input
+and output data structures to convert multi-file HTS voices to single-file
+HTS voices.
+
+The voice file licenses are:
+
+cmu_us_slt_arctic.htsvoice
+
+This voice is from hts_engine distribution from the
+file :hts_voice_cmu_us_arctic_slt-1.05.tar.gz
+This file has not been altered from the version in the hts_engine distribution.
+This voice is derived from CMU ARCTIC database and has the
+CMU ARCTIC license as given at the end of this document and
+also the HTS license given here:
+
+# ----------------------------------------------------------------- #
+#           HTS Voice "CMU ARCTIC SLT"                              #
+#           released by HTS Working Group                           #
+#           http://hts-engine.sourceforge.net/                      #
+# ----------------------------------------------------------------- #
+#                                                                   #
+#  Copyright (c) 2003-2012  Nagoya Institute of Technology          #
+#                           Department of Computer Science          #
+#                                                                   #
+#                2003-2008  Tokyo Institute of Technology           #
+#                           Interdisciplinary Graduate School of    #
+#                           Science and Engineering                 #
+#                                                                   #
+# Some rights reserved.                                             #
+#                                                                   #
+# This work is licensed under the Creative Commons Attribution 3.0  #
+# license.                                                          #
+#                                                                   #
+# You are free:                                                     #
+#  * to Share - to copy, distribute and transmit the work           #
+#  * to Remix - to adapt the work                                   #
+# Under the following conditions:                                   #
+#  * Attribution - You must attribute the work in the manner        #
+#    specified by the author or licensor (but not in any way that   #
+#    suggests that they endorse you or your use of the work).       #
+# With the understanding that:                                      #
+#  * Waiver - Any of the above conditions can be waived if you get  #
+#    permission from the copyright holder.                          #
+#  * Public Domain - Where the work or any of its elements is in    #
+#    the public domain under applicable law, that status is in no   #
+#    way affected by the license.                                   #
+#  * Other Rights - In no way are any of the following rights       #
+#    affected by the license:                                       #
+#     - Your fair dealing or fair use rights, or other applicable   #
+#       copyright exceptions and limitations;                       #
+#     - The author's moral rights;                                  #
+#     - Rights other persons may have either in the work itself or  #
+#       in how the work is used, such as publicity or privacy       #
+#       rights.                                                     #
+#  * Notice - For any reuse or distribution, you must make clear to #
+#    others the license terms of this work. The best way to do this #
+#    is with a link to this web page.                               #
+#                                                                   #
+# See http://creativecommons.org/ for details.                      #
+# ----------------------------------------------------------------- #
+
+
+cmu_us_slt_arctic_hts_32k.htsvoice
+
+This voice is from the file festvox_cmu_us_slt_arctic_hts.tar.gz
+supplied with Festival 2.1. It was converted to single file HTS
+format using HTSmulti2single.py. The license in the original package
+was the CMU ARCTIC license given at the end of this document.
+
+calrama_cmu_us_slt_arctic_hts_32k.htsvoice
+
+This voice was trained by user: Calrama of ubuntuforums.org.
+It was converted to single file HTS format using HTSmulti2single.py.
+The license in this package was the CMU ARCTIC license given at the end
+of this document.
+
+
+*.flitevox
+
+These voices were dumped from Flite for Android's source
+release file : flite-1.5.6-current-full.tar.bz2
+They were dumped from the compiled flite program using the fucntionality
+provided by that program. The voices were not altered in anyway
+after dumping.
+The license for these voices comes from the flite distribution and
+is given by:
+ 
+
+                  Language Technologies Institute                      
+                     Carnegie Mellon University                        
+                      Copyright (c) 1999-2011                          
+                        All Rights Reserved.                           
+                                                                       
+  Permission is hereby granted, free of charge, to use and distribute  
+  this software and its documentation without restriction, including   
+  without limitation the rights to use, copy, modify, merge, publish,  
+  distribute, sublicense, and/or sell copies of this work, and to      
+  permit persons to whom this work is furnished to do so, subject to   
+  the following conditions:                                            
+   1. The code must retain the above copyright notice, this list of    
+      conditions and the following disclaimer.                         
+   2. Any modifications must be clearly marked as such.                
+   3. Original authors' names are not deleted.                         
+   4. The authors' names are not used to endorse or promote products   
+      derived from this software without specific prior written        
+      permission.                                                      
+                                                                       
+  CARNEGIE MELLON UNIVERSITY AND THE CONTRIBUTORS TO THIS WORK         
+  DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING      
+  ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT   
+  SHALL CARNEGIE MELLON UNIVERSITY NOR THE CONTRIBUTORS BE LIABLE      
+  FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN   
+  AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,          
+  ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF       
+  THIS SOFTWARE.
+
+nitechvoices/*
+
+The copyright and license terms of material within the 
+nitechvoices folder is extracted voice data supplied with
+Festival 1.95. This data was in turn based on data in the CMU ARCTIC
+database. We have extracted only files relevant to bellbird.
+The files themselves have not been modified.
+
+The terms of the data are reproduced below:
+
+================================================================
+             HTS voices for Festival 1.95 & 1.96
+                  release June 27, 2008
+
+Six HTS voices for Festival 1.95 & 1.96 trained by using 
+"CMU ARCTIC database" (http://www.festvox.org/cmu_arctic/) 
+are released as a part of HMM-based Speech Synthesis System 
+(HTS) version 2.1 (http://hts.sp.nitech.ac.jp/).  Each of 
+HTS voices consists of HMMs trained by using HTS.
+
+****************************************************************
+                            Copying
+****************************************************************
+The copyright on the voice data files is:
+
+/* ----------------------------------------------------------------- */
+/*           The HMM-Based Speech Synthesis System (HTS)             */
+/*           developed by HTS Working Group                          */
+/*           http://hts.sp.nitech.ac.jp/                             */
+/* ----------------------------------------------------------------- */
+/*                                                                   */
+/*  Copyright (c) 2001-2008  Nagoya Institute of Technology          */
+/*                           Department of Computer Science          */
+/*                                                                   */
+/*                2001-2008  Tokyo Institute of Technology           */
+/*                           Interdisciplinary Graduate School of    */
+/*                           Science and Engineering                 */
+/*                                                                   */
+/* All rights reserved.                                              */
+/*                                                                   */
+/* Redistribution and use in source and binary forms, with or        */
+/* without modification, are permitted provided that the following   */
+/* conditions are met:                                               */
+/*                                                                   */
+/* - Redistributions of source code must retain the above copyright  */
+/*   notice, this list of conditions and the following disclaimer.   */
+/* - Redistributions in binary form must reproduce the above         */
+/*   copyright notice, this list of conditions and the following     */
+/*   disclaimer in the documentation and/or other materials provided */
+/*   with the distribution.                                          */
+/* - Neither the name of the HTS working group nor the names of its  */
+/*   contributors may be used to endorse or promote products derived */
+/*   from this software without specific prior written permission.   */
+/*                                                                   */
+/* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND            */
+/* CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,       */
+/* INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF          */
+/* MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE          */
+/* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS */
+/* BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,          */
+/* EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED   */
+/* TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,     */
+/* DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON */
+/* ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,   */
+/* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY    */
+/* OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE           */
+/* POSSIBILITY OF SUCH DAMAGE.                                       */
+/* ----------------------------------------------------------------- */
+****************************************************************
+                           Who we are
+****************************************************************
+
+The HTS working group is a voluntary group for developing the
+HMM-Based Speech Synthesis System.  Current members are
+
+ Keiichi Tokuda      http://www.sp.nitech.ac.jp/~tokuda/
+ (Principle Designer)
+ Heiga Zen           http://www.sp.nitech.ac.jp/~zen/
+ (Main Maintainer)
+ Junichi Yamagishi   http://homepages.inf.ed.ac.uk/jyamagis/
+ Alan W. Black       http://www.cs.cmu.edu/~awb/
+ Takashi Masuko
+ Shinji Sako         http://www.mmsp.nitech.ac.jp/~sako/
+ Tomoki Toda         http://spalab.naist.jp/~tomoki/index_e.html
+ Takashi Nose
+ Keiichiro Oura      http://www.sp.nitech.ac.jp/~uratec/
+
+and the members are dynamically changing.  The current formal
+contact address of HTS working group and a mailing list for HTS
+users can be found at http://hts.sp.nitech.ac.jp/
+================================================================
+
+The CMU ARCTIC database data had the following license:
+
+This voice is free for use for any purpose (commercial or otherwise)
+subject to the pretty light restrictions detailed below.
+
+############################################################################
+###                                                                       ##
+###                     Carnegie Mellon University                        ##
+###                         Copyright (c) 2003                            ##
+###                        All Rights Reserved.                           ##
+###                                                                       ##
+###  Permission to use, copy, modify,  and licence this software and its  ##
+###  documentation for any purpose, is hereby granted without fee,        ##
+###  subject to the following conditions:                                 ##
+###   1. The code must retain the above copyright notice, this list of    ##
+###      conditions and the following disclaimer.                         ##
+###   2. Any modifications must be clearly marked as such.                ##
+###   3. Original authors' names are not deleted.                         ##
+###                                                                       ##
+###  THE AUTHORS OF THIS WORK DISCLAIM ALL WARRANTIES WITH REGARD TO      ##
+###  THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY   ##
+###  AND FITNESS, IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY         ##
+###  SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES            ##
+###  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN   ##
+###  AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTUOUS ACTION,          ##
+###  ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF       ##
+###  THIS SOFTWARE.                                                       ##
+###                                                                       ##
+############################################################################
+###                                                                       ##
+###  See http://www.festvox.org/cmu_arctic/ for more details              ##
+###                                                                       ##
+############################################################################
+
