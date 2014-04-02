@@ -146,7 +146,7 @@ def main():
             tmp = encode_phonelist(phonelist,phonemes_symdata,rep_table)
             encodedlinestart = '   '+''.join(reversed(tmp))+' 255, /* '
             bytecount += encodedlinestart.count(',')
-            outfp.write(bytes(encodedlinestart,'utf-8')+bytes(repr(bytecount),'utf-8')+bytes(' ','utf-8')
+            outfp.write(bytes(encodedlinestart,'utf-8')
                         +bytes(word,'utf-8')+bytes(encodedlineend,'utf-8'))
             bytecount += encodedlineend.count(',')
         outfp.write(bytes('/* num_bytes = ','utf-8') + bytes(repr(bytecount),'utf-8')+ bytes(' */\n','utf-8'))
