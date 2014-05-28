@@ -95,6 +95,8 @@ def decode_phonemes_dict(phonemes,symdata,rep_table):
         phones.append(b'')
         numofsymbols=len(line)
         j=numofsymbols-1
+        if j==-1:
+            phones[i] = phones[i] + b' '
         while j>-1:  # phoneme symbols are stored in reverse order so read them backwards
             sym = symdata[int(line[j])]
             for k in range(len(sym)):

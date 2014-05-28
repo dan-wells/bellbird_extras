@@ -89,6 +89,8 @@ def encode_word(word,symdata):
 def encode_phonelist(phonelist, symdata, rep_table):
     "Phoneme list encoding"
 
+    if phonelist == ['']:
+        return ['']
     phonelistlen = len(phonelist)
     symdatalen = len(symdata)
     i = 0
