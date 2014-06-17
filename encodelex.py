@@ -144,7 +144,8 @@ def main():
             phonelist = phone_dict[i]
             phonelist = phonelist.replace('\n','')
             phonelist = phonelist.split(' ')
-            phonelist.pop()
+            if phonelist[-1] == '':
+                phonelist.pop()
             tmp = encode_phonelist(phonelist,phonemes_symdata,rep_table)
             encodedlinestart = '   '+''.join(reversed(tmp))+' 255, /* '
             bytecount += encodedlinestart.count(',')
