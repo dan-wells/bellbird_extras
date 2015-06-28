@@ -83,9 +83,10 @@ of this document.
 
 These voices were dumped from Flite for Android's source
 release file : flite-1.5.6-current-full.tar.bz2
-They were dumped from the compiled flite program using the fucntionality
-provided by that program. The voices were not altered in anyway
-after dumping.
+They were dumped from the compiled flite program using the functionality
+provided by that program. The text headers of the voice files
+were changed to work with new versions of Bellbird. Despite the updated
+headers, these voice files are not designed to work with flite v2.0.
 The license for these voices comes from the flite distribution and
 is given by:
  
