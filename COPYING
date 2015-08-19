@@ -78,8 +78,14 @@ It was converted to single file HTS format using HTSmulti2single.py.
 The license in this package was the CMU ARCTIC license given at the end
 of this document.
 
+bel_us_*_arctic.flitevox
 
-*.flitevox
+These voices were trained for use with Bellbird from CMU ARCTIC data.
+The CMU ARCTIC license is given at the end of this document.
+Despite the headers, these voice files are not designed to work with
+flite v2.0.
+
+*_from_flitev1.5.6.flitevox
 
 These voices were dumped from Flite for Android's source
 release file : flite-1.5.6-current-full.tar.bz2
