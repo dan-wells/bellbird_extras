@@ -13,10 +13,10 @@ import symbols # module for symbol table functions
 def find_sym_freq(lex):
     "Finds frequency of symbols in lexicon entries"
 
-    freq_bins= [0]*256
+    freq_bins = [0]*256
     for line in lex:
-        for j, elmnt in enumerate(line):
-            freq_bins [int(elmnt)] += 1
+        for elmnt in enumerate(line):
+            freq_bins[int(elmnt)] += 1
     return freq_bins
 
 def get_entries_only(lex):
@@ -46,8 +46,8 @@ def get_phonemes_only(lex):
 def get_lex_as_lists(fname):
     "Prepare list of lists of decimal numbers of compressed dictionary"
 
-    with open(fname, 'rb') as fp:
-        rawdata = fp.read()
+    with open(fname, 'rb') as fpin:
+        rawdata = fpin.read()
 
     lexbyline = rawdata.splitlines(True)
     lexbyline.pop(0)    # remove comment header
@@ -59,26 +59,26 @@ def get_lex_as_lists(fname):
 
 # remove C comments and extraneous spaces
     for i, line in enumerate(lexbyline):
-        lexbyline[i] = re.sub(" \/\*.*\*\/ ","",line)
-        lexbyline[i] = re.sub(" *","",lexbyline[i])
+        lexbyline[i] = re.sub(r" /\*.*\*/ ", "", line)
+        lexbyline[i] = re.sub(" *", "", lexbyline[i])
 
-# Convert into list of lists of decimal numbers 
+# Convert into list of lists of decimal numbers
     for i, line in enumerate(lexbyline):
-        lexbyline[i] = lexbyline[i].replace('\n','')
+        lexbyline[i] = lexbyline[i].replace('\n', '')
         lexbyline[i] = lexbyline[i].split(',')
         lexbyline[i].pop()
 
     return lexbyline
 
-def decode_entries_dict(entries,symdata):
+def decode_entries_dict(entries, symdata):
     "Decode entries given symdata to give dictionary words"
 
     words = []
     for i, line in enumerate(entries):
         words.append(b'')
-        numofsymbols=len(line)
-        j=0
-        while j<numofsymbols:
+        numofsymbols = len(line)
+        j = 0
+        while j < numofsymbols:
             if int(line[j]) == 1:
                 words[i] = words[i] + bytes((int(line[j+1]),))
                 j += 2
@@ -87,17 +87,17 @@ def decode_entries_dict(entries,symdata):
                 j += 1
     return words
 
-def decode_phonemes_dict(phonemes,symdata,rep_table):
+def decode_phonemes_dict(phonemes, symdata, rep_table):
     "Decode phonemes given symbol data and representation table for a dictionary"
 
     phones = []
     for i, line in enumerate(phonemes):
         phones.append(b'')
-        numofsymbols=len(line)
-        j=numofsymbols-1
-        if j==-1:
+        numofsymbols = len(line)
+        j = numofsymbols-1
+        if j == -1:
             phones[i] = phones[i] + b' '
-        while j>-1:  # phoneme symbols are stored in reverse order so read them backwards
+        while j > -1:  # phoneme symbols are stored in reverse order so read them backwards
             sym = symdata[int(line[j])]
             for k in range(len(sym)):
                 phones[i] = phones[i] + rep_table[sym[k]].encode('utf-8') + b' '
@@ -116,18 +116,18 @@ def main():
 
     phonemes = get_phonemes_only(lex)
 
-    phones = decode_phonemes_dict(phonemes,phonemes_symdata,rep_table)
-    words = decode_entries_dict(entries,entries_symdata)
+    phones = decode_phonemes_dict(phonemes, phonemes_symdata, rep_table)
+    words = decode_entries_dict(entries, entries_symdata)
 
 #   freq_bins = find_sym_freq(phonemes)
 #   print(freq_bins)
 
-    with open('dict', 'wb') as fp:
+    with open('dict', 'wb') as fpout:
         for i in range(len(phones)):
-            fp.write(words[i])
-            fp.write(bytes(':','utf-8'))
-            fp.write(phones[i])
-            fp.write(bytes('\n','utf-8'))
+            fpout.write(words[i])
+            fpout.write(bytes(':', 'utf-8'))
+            fpout.write(phones[i])
+            fpout.write(bytes('\n', 'utf-8'))
 
 if __name__ == "__main__":
     main()
